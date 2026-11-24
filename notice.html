@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <script src="theme.js"></script>
+  <link rel="stylesheet" href="style.css">
+  <title>Notice Board | Day Star Academy</title>
+  <link rel="stylesheet" href="notice-style.css">
+  <link rel="icon" type="image/png" href="favicon.png">
+  <link rel="apple-touch-icon" href="favicon.png">
+  <link rel="manifest" href="manifest.json">
+  <meta name="theme-color" content="#1d5de0">
+</head>
+<body>
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <symbol id="i-bell" viewBox="0 0 24 24"><path d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9"/><path d="M13.73 21a2 2 0 0 1-3.46 0"/></symbol>
+  <symbol id="i-x" viewBox="0 0 24 24"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></symbol>
+  <symbol id="i-trash" viewBox="0 0 24 24"><polyline points="3 6 5 6 21 6"/><path d="M19 6l-1 14a2 2 0 0 1-2 2H8a2 2 0 0 1-2-2L5 6"/><path d="M10 11v6"/><path d="M14 11v6"/><path d="M9 6V4a1 1 0 0 1 1-1h4a1 1 0 0 1 1 1v2"/></symbol>
+  <symbol id="i-image" viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="2" ry="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></symbol>
+  <symbol id="i-sliders" viewBox="0 0 24 24"><line x1="4" y1="21" x2="4" y2="14"/><line x1="4" y1="10" x2="4" y2="3"/><line x1="12" y1="21" x2="12" y2="12"/><line x1="12" y1="8" x2="12" y2="3"/><line x1="20" y1="21" x2="20" y2="16"/><line x1="20" y1="12" x2="20" y2="3"/><line x1="1" y1="14" x2="7" y2="14"/><line x1="9" y1="8" x2="15" y2="8"/><line x1="17" y1="16" x2="23" y2="16"/></symbol>
+  <symbol id="i-send" viewBox="0 0 24 24"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></symbol>
+  <symbol id="i-list" viewBox="0 0 24 24"><line x1="8" y1="6" x2="21" y2="6"/><line x1="8" y1="12" x2="21" y2="12"/><line x1="8" y1="18" x2="21" y2="18"/><line x1="3" y1="6" x2="3.01" y2="6"/><line x1="3" y1="12" x2="3.01" y2="12"/><line x1="3" y1="18" x2="3.01" y2="18"/></symbol>
+  <symbol id="i-mic" viewBox="0 0 24 24"><path d="M12 1a3 3 0 0 0-3 3v8a3 3 0 0 0 6 0V4a3 3 0 0 0-3-3z"/><path d="M19 10v2a7 7 0 0 1-14 0v-2"/><line x1="12" y1="19" x2="12" y2="23"/><line x1="8" y1="23" x2="16" y2="23"/></symbol>
+  <symbol id="i-calendar" viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></symbol>
+  <symbol id="i-upload" viewBox="0 0 24 24"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="17 8 12 3 7 8"/><line x1="12" y1="3" x2="12" y2="15"/></symbol>
+  <symbol id="i-logout" viewBox="0 0 24 24"><path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4"/><polyline points="16 17 21 12 16 7"/><line x1="21" y1="12" x2="9" y2="12"/></symbol>
+  <symbol id="i-lock" viewBox="0 0 24 24"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></symbol>
+</svg>
+
+  <header class="site-header">
+    <div class="container header-inner">
+      <a href="index.html#top" class="brand" aria-label="Dev Bills School home">
+        <span class="logo-box">
+          <img src="images/logo.png" alt="Dev Bills School logo" id="site-logo" onerror="this.style.display='none'">
+          <span class="logo-fallback" aria-hidden="true">DS</span>
+        </span>
+        <span class="brand-name">Day Star Academy</span>
+      </a>
+
+      <button class="nav-toggle" id="nav-toggle" aria-label="Open menu" aria-expanded="false" aria-controls="main-nav">
+        <span></span><span></span><span></span>
+      </button>
+
+      <nav class="main-nav" id="main-nav" aria-label="Main">
+        <a href="index.html">Home</a>
+        <a href="index.html#headmistress">Headmaster</a>
+        <a href="index.html#gallery">Gallery</a>
+        <a href="index.html#about">About</a>
+        <a href="notice.html" class="active">Notice Board</a>
+        <a href="index.html#contact" class="nav-cta">Contact Us</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="top">
+
+    <!-- LOGIN GATE -->
+    <section id="login-section" class="section section-tint portal-section">
+      <div class="container narrow">
+        <div class="portal-card">
+          <div class="portal-header center">
+            <h2>Notice Board Access</h2>
+            <p class="section-sub">Enter the school PIN to view notices and the calendar.</p>
+          </div>
+
+          <form id="login-form" class="portal-form">
+            <div class="form-group">
+              <label for="parent-pin">School PIN</label>
+              <input type="password" id="parent-pin" class="form-input" placeholder="4-digit PIN" maxlength="4" inputmode="numeric" required>
+            </div>
+            <button type="submit" class="btn btn-blue btn-full">Unlock Board</button>
+            <div id="error-msg" class="error-msg" hidden>Invalid PIN. Please check with the school office.</div>
+          </form>
+        </div>
+      </div>
+    </section>
+
+    <!-- UNLOCKED PORTAL -->
+    <div id="portal-content" hidden>
+      <section class="portal-banner">
+        <div class="container banner-inner">
+          <h1 class="with-icon"><svg class="icon icon-lg" aria-hidden="true"><use href="#i-bell"></use></svg> School Notices</h1>
+          <button type="button" id="logout-btn" class="btn btn-white">
+            <svg class="icon" aria-hidden="true"><use href="#i-lock"></use></svg> Lock Board
+          </button>
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="container narrow">
+          <div class="notices-list"></div>
+        </div>
+      </section>
+
+      <section class="section section-tint">
+        <div class="container narrow">
+          <h2 class="with-icon"><svg class="icon icon-lg" aria-hidden="true"><use href="#i-calendar"></use></svg> School Calendar</h2>
+          <p class="section-sub">Check upcoming events, holidays, and term dates.</p>
+          <div class="calendar-frame">
+            <!-- REPLACE THE SRC BELOW WITH THE SCHOOL'S ACTUAL GOOGLE CALENDAR LINK -->
+            <iframe title="School calendar" src="https://calendar.google.com/calendar/embed?src=en.gh%23holiday%40group.v.calendar.google.com&ctz=Africa%2FAccra" loading="lazy"></iframe>
+          </div>
+        </div>
+      </section>
+    </div>
+
+  </main>
+
+  <footer id="contact" class="site-footer">
+    <div class="container footer-inner">
+      <div class="footer-col">
+        <p class="footer-title">Day Star Academy</p>
+        <p>Adoteiman Aya Court, Otinibi Road, Danfa</p>
+        <p>Phone: 024 454 61266</p>
+      </div>
+      <div class="footer-col">
+        <p class="footer-heading">Quick Links</p>
+        <div class="footer-links">
+          <a href="index.html#about">About</a>
+          <a href="index.html#headmistress">Headmaster</a>
+        </div>
+      </div>
+      <div class="footer-col">
+        <p class="footer-heading">Get in Touch</p>
+        <p class="footer-text">Have questions or want to enroll? Reach out to us today.</p>
+        <a href="index.html#contact" class="btn btn-outline footer-btn">Contact Us</a>
+      </div>
+    </div>
+    <div class="container footer-bottom">
+      <p>&copy; <span id="year">2026</span> Day Star Academy. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+  <script src="supabase-config.js"></script>
+  <script src="script.js"></script>
+  <script src="notice-script.js"></script>
+</body>
+</html>
