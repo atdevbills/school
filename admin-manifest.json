@@ -1,7 +1,7 @@
 {
   "id": "./admin.html",
   "name": "Day Star Admin",
-  "short_name": "Priberts Admin",
+  "short_name": "Day Star Admin",
   "description": "Admin portal for Day Star Academy.",
   "start_url": "./admin.html",
   "scope": "./",
